@@ -3,6 +3,7 @@ import CardList from "../Component/CardList";
 import { Persona } from "../Component/Array";
 import SearchBox from "../Component/SearchBox";
 import Scroll from "../Component/Scroll";
+import ErrorHandler from "../Component/ErrorHandler";
 // import './index.css';
 
 class App extends Component {
@@ -28,8 +29,6 @@ class App extends Component {
           concatArray: users.concat(this.state.persona),
         });
       });
-
-    console.log("rodiyyah", this.state.concatArray);
   }
 
   render() {
@@ -37,14 +36,15 @@ class App extends Component {
     const searchRobots = this.state.concatArray.filter((Newname) => {
       return Newname.name.toLowerCase().includes(searchCase);
     });
-    console.log("mehn", searchRobots);
 
     return (
       <div className="tc bg-green">
         <SearchBox searchRobots={this.onSearchChange} />
-        <Scroll>
-          <CardList robot={searchRobots} />
-        </Scroll>
+        <ErrorHandler>
+          <Scroll>
+            <CardList robot={searchRobots} />
+          </Scroll>
+        </ErrorHandler>
       </div>
     );
   }
