@@ -4,21 +4,14 @@ import React from "react";
 const SearchBox = ({ searchfield, searchRobots }) => {
   return (
     <div className="search_Div">
-      <nav>
-        <ul className="search_ul">
-          <li>
-            <h1 className="robo">Robofriends</h1>
-          </li>
-          <li>
-            <input
-              className="robots"
-              type="text"
-              placeholder="Search"
-              onChange={searchRobots}
-            />
-          </li>
-        </ul>
-      </nav>
+      <ul className="search_ul">
+        <li>
+          <h1 className="robo">Robofriends</h1>
+        </li>
+        <li className="robots">
+          <input type="text" placeholder="Search" onChange={searchRobots} />
+        </li>
+      </ul>
     </div>
   );
 };

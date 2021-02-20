@@ -38,7 +38,7 @@ class App extends Component {
     });
 
     return (
-      <div className="tc bg-green">
+      <div className="App_Div">
         <SearchBox searchRobots={this.onSearchChange} />
         <ErrorHandler>
           <Scroll>
