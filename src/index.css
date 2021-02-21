@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&family=Lobster&family=Playfair+Display:ital@1&family=Slabo+27px&display=swap");
 html {
   background-color: #19a974;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 body {
   margin: 0;
@@ -23,7 +26,8 @@ code {
   justify-content: center;
   overflow-y: scroll;
   border: 5px black solid;
-  height: 1000px;
+  height: 100%;
+  width: 100%;
 }
 .App_Div {
   /* background-color: green; */
@@ -38,15 +42,15 @@ code {
   padding: 10px;
 }
 li {
-  display: inline-block;
+  /* display: inline-block; */
+  display: flex;
+  flex-wrap: wrap;
 }
 .robots {
   margin-left: 300px;
   margin-top: 10px;
 }
 .search_ul {
-  display: flex;
-  flex-wrap: wrap;
   list-style: none;
   margin-top: 5px;
 }
@@ -56,10 +60,13 @@ input {
   border: none;
 }
 .robo {
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Playfair Display", serif;
   margin-top: 0%;
   margin-right: 0%;
 }
+/* .search_Div {
+  padding: 20px;
+} */
