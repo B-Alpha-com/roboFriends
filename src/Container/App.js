@@ -4,7 +4,8 @@ import { Persona } from "../Component/Array";
 import SearchBox from "../Component/SearchBox";
 import Scroll from "../Component/Scroll";
 import ErrorHandler from "../Component/ErrorHandler";
-// import './index.css';
+import "../index.css";
+// import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -18,6 +19,9 @@ class App extends Component {
   }
   onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value });
+  };
+  onScroll = (e) => {
+    console.log(window.pageYOffset);
   };
 
   componentDidMount() {
@@ -38,7 +42,7 @@ class App extends Component {
     });
 
     return (
-      <div className="App_Div">
+      <div className="App_Div" onScroll={(e) => this.onScroll(e)}>
         <SearchBox searchRobots={this.onSearchChange} />
         <ErrorHandler>
           <Scroll>
